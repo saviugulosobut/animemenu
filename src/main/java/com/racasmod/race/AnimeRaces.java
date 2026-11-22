@@ -223,4 +223,32 @@ final class AnimeRaces {
                 .perk("Chuva de Facas e Road Roller!")
                 .perk("Rouba 15% do dano em vida e Força II à noite")
                 .perk("Começa com a Faca de Arremesso")
-                .flaw
+                                .flaw("Pega fogo sob o sol (um capacete protege)"));
+
+        // ---------- Fate
+        add.accept(Race.of("gilgamesh", "Gilgamesh", Items.GOLDEN_SWORD, 0xFFD600,
+                "O Rei dos Heróis. O tesouro do mundo é dele.")
+                .hp(4).armor(4).luck(5).dmg(-1).speed(-0.05)
+                .ability(GATE_OF_BABYLON).also(ENKIDU, ENUMA_ELISH).give(ModItems.EA)
+                .perk("Portão da Babilônia (R): chuva de armas douradas")
+                .perk("Enkidu: correntes prendem todos por perto")
+                .perk("Enuma Elish: a espada que rasga o mundo")
+                .perk("Sorte +5 e +4 de armadura")
+                .perk("Começa com Ea, a Espada da Ruptura")
+                .flaw("-1 de dano e 5% mais lento (orgulhoso demais para correr)"));
+
+        // ---------- Berserk
+        add.accept(Race.of("guts", "Guts", Items.IRON_AXE, 0x424242,
+                "O Espadachim Negro. Uma espada grande demais para ser espada.")
+                .hp(6).dmg(3).armor(2).kb(0.5).speed(-0.05)
+                .ability(DRAGON_SLAYER).also(BERSERKER_ARMOR, ARM_CANNON).give(ModItems.DRAGONSLAYER)
+                .perk("Mata-Dragão (R): golpe absurdo num só alvo")
+                .perk("Armadura Berserker: Força III e Resistência III por 20s, mas custa 2,5 corações")
+                .perk("Canhão do Braço: disparo explosivo à frente")
+                .perk("+3 de dano e resistência a empurrão")
+                .perk("Começa com o Mata-Dragão")
+                .flaw("5% mais lento (a espada pesa)"));
+    }
+
+    private AnimeRaces() {}
+}
